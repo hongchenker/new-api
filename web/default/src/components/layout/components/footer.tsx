@@ -41,11 +41,11 @@ interface FooterProps {
   className?: string
 }
 
-const NEW_API_FOOTER_ATTRIBUTION_KEY = [
+/*const NEW_API_FOOTER_ATTRIBUTION_KEY = [
   'footer',
   'new' + 'api',
   'projectAttributionSuffix',
-].join('.')
+].join('.')*/
 
 function FooterLinkItem(props: { link: FooterLink }) {
   const { t } = useTranslation()
@@ -128,14 +128,13 @@ function ProjectAttribution(props: { currentYear: number; inline?: boolean }) {
     <span className='text-muted-foreground/45'>
       &copy; {props.currentYear}{' '}
       <a
-        href='https://github.com/QuantumNous/new-api'
+        href='/'
         target='_blank'
         rel='noopener noreferrer'
         className='text-foreground/70 hover:text-foreground font-medium transition-colors'
       >
-        {t('New API')}
+        {t('RealmAI')}
       </a>
-      . {t(NEW_API_FOOTER_ATTRIBUTION_KEY)}
     </span>
   )
   if (props.inline) {
